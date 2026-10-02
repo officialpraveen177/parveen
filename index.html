@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praveen Ads Agency | Digital Marketing &amp; Meta Ads Services</title>
+<meta name="description" content="Praveen Ads Agency provides Meta Ads, WhatsApp API, Agency Ad Account, Social Media Marketing and Google Business Profile solutions for businesses.">
+<meta property="og:title" content="Praveen Ads Agency | Digital Marketing & Meta Ads Services">
+<meta property="og:description" content="Meta Ads, WhatsApp API, Agency Ad Accounts, Social Media Marketing and Google Business Profile solutions designed to help businesses grow.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234F7FFF'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #080B14;
+    --bg-soft: #0E1424;
+    --surface: #131A2E;
+    --surface-2: #182140;
+    --border: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.14);
+    --text: #F3F5FA;
+    --text-muted: #8E97AE;
+    --text-dim: #5D6580;
+    --accent-1: #5B7FFF;
+    --accent-2: #9B6BFF;
+    --accent-grad: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    --whatsapp: #25D366;
+    --whatsapp-dark: #1DA851;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --font-display: 'Sora', 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --maxw: 1180px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color: inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; }
+  button{ font-family: inherit; cursor:pointer; }
+  h1,h2,h3,h4{ font-family: var(--font-display); margin:0; letter-spacing:-0.01em; }
+  p{ margin:0; }
+  .container{ max-width: var(--maxw); margin:0 auto; padding: 0 24px; }
+
+  :focus-visible{ outline: 2px solid var(--accent-1); outline-offset: 3px; border-radius: 4px; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+
+  /* ---------- Background texture ---------- */
+  .bg-glow{
+    position: fixed; inset:0; z-index:-2; pointer-events:none;
+    background:
+      radial-gradient(600px 420px at 85% -5%, rgba(91,127,255,0.20), transparent 60%),
+      radial-gradient(500px 400px at 5% 25%, rgba(155,107,255,0.14), transparent 60%);
+  }
+  .bg-grid{
+    position: fixed; inset:0; z-index:-3; pointer-events:none; opacity:0.35;
+    background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 60%, transparent);
+  }
+
+  /* ---------- Navbar ---------- */
+  .navbar{
+    position: relative; top:0; z-index: 500;
+    background: rgba(8,11,20,0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--border);
+    transition: background .3s ease, border-color .3s ease;
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 14px 24px; max-width: var(--maxw); margin:0 auto;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; font-family: var(--font-display); font-weight:700; font-size:1.05rem; }
+  .brand-mark{
+    width:34px; height:34px; border-radius:50%; flex-shrink:0;
+    object-fit: cover; border: 1.5px solid var(--border-strong);
+    box-shadow: 0 4px 18px rgba(91,127,255,0.35);
+  }
+  .nav-links{ display:flex; gap:30px; align-items:center; }
+  .nav-links a{
+    font-size:0.95rem; color: var(--text-muted); font-weight:500; position:relative; padding:6px 0;
+    transition: color .2s ease;
+  }
+  .nav-links a:hover, .nav-links a.active{ color: var(--text); }
+  .nav-links a.active::after{
+    content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px; background: var(--accent-grad); border-radius:2px;
+  }
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding: 11px 20px; border-radius: 999px; font-weight:600; font-size:0.92rem;
+    border:1px solid transparent; transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+    white-space: nowrap;
+  }
+  .btn:active{ transform: translateY(1px) scale(0.99); }
+  .btn-primary{
+    background: var(--accent-grad); color:#fff; box-shadow: 0 8px 22px rgba(91,127,255,0.30);
+  }
+  .btn-primary:hover{ box-shadow: 0 10px 28px rgba(91,127,255,0.45); transform: translateY(-1px); }
+  .btn-whatsapp{
+    background: var(--whatsapp); color:#06210F; box-shadow: 0 8px 22px rgba(37,211,102,0.28);
+  }
+  .btn-whatsapp:hover{ background: var(--whatsapp-dark); box-shadow: 0 10px 26px rgba(37,211,102,0.4); transform: translateY(-1px); }
+  .btn-ghost{
+    background: transparent; border-color: var(--border-strong); color: var(--text);
+  }
+  .btn-ghost:hover{ background: rgba(255,255,255,0.06); }
+  .btn svg{ width:17px; height:17px; flex-shrink:0; }
+
+  .hamburger{
+    display:none; width:40px; height:40px; border-radius:8px; background: var(--surface);
+    border:1px solid var(--border); align-items:center; justify-content:center; flex-direction:column; gap:4px;
+  }
+  .hamburger span{ width:18px; height:2px; background: var(--text); border-radius:2px; transition: all .25s ease; }
+  .hamburger.open span:nth-child(1){ transform: translateY(6px) rotate(45deg); }
+  .hamburger.open span:nth-child(2){ opacity:0; }
+  .hamburger.open span:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+
+  .mobile-menu{
+    display:none; flex-direction:column; gap:2px; padding: 10px 24px 18px;
+    border-top:1px solid var(--border); background: rgba(8,11,20,0.98);
+  }
+  .mobile-menu a{ padding:12px 4px; color: var(--text-muted); font-weight:500; border-bottom:1px solid var(--border); }
+  .mobile-menu a:last-child{ border-bottom:none; }
+  .mobile-menu.show{ display:flex; }
+
+  /* ---------- Hero ---------- */
+  .hero{ padding: 96px 0 70px; position:relative; }
+  .hero-grid{ display:grid; grid-template-columns: 1.05fr 0.95fr; gap:56px; align-items:center; }
+  .hero-copy h1{
+    font-size: clamp(2.3rem, 4.4vw, 3.5rem); line-height:1.08; font-weight:700; color:#fff;
+  }
+  .hero-copy .sub{
+    margin-top:20px; font-size:1.08rem; color: var(--text-muted); max-width: 520px; line-height:1.65;
+  }
+  .hero-ctas{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
+  .trust-row{ display:flex; gap:22px; margin-top:34px; flex-wrap:wrap; }
+  .trust-item{ display:flex; align-items:center; gap:8px; font-size:0.88rem; color: var(--text-muted); }
+  .trust-item svg{ width:16px; height:16px; color: var(--accent-1); flex-shrink:0; }
+
+  /* Hero visual: animated "dashboard" */
+  .hero-visual{ position:relative; }
+  .dash{
+    background: linear-gradient(160deg, var(--surface), var(--surface-2));
+    border:1px solid var(--border-strong); border-radius: var(--radius-lg);
+    padding: 22px; box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6);
+    position:relative; overflow:hidden;
+  }
+  .dash::before{
+    content:''; position:absolute; top:-40%; right:-30%; width:70%; height:140%;
+    background: radial-gradient(circle, rgba(91,127,255,0.18), transparent 65%);
+  }
+  .dash-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
+  .dash-title{ font-size:0.82rem; color: var(--text-muted); font-weight:600; }
+  .dash-dot{ width:8px; height:8px; border-radius:50%; background: var(--whatsapp); box-shadow: 0 0 0 4px rgba(37,211,102,0.18); animation: pulse 2s infinite; }
+  @keyframes pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(37,211,102,0.18);} 50%{ box-shadow:0 0 0 8px rgba(37,211,102,0.08);} }
+  .dash-bars{ display:flex; align-items:flex-end; gap:10px; height:120px; margin-bottom:20px; }
+  .dash-bars span{
+    flex:1; border-radius: 6px 6px 0 0; background: linear-gradient(180deg, var(--accent-2), var(--accent-1));
+    opacity:0.85; transform-origin:bottom; animation: rise 1.2s cubic-bezier(.2,.8,.2,1) both;
+  }
+  @keyframes rise{ from{ transform: scaleY(0); } to{ transform: scaleY(1); } }
+  .dash-rows{ display:flex; flex-direction:column; gap:10px; }
+  .dash-row{
+    display:flex; align-items:center; gap:10px; padding:10px 12px; background: rgba(255,255,255,0.03);
+    border:1px solid var(--border); border-radius:10px; font-size:0.82rem; color: var(--text-muted);
+  }
+  .dash-row .ic{
+    width:26px; height:26px; border-radius:7px; background: var(--accent-grad); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.7rem; font-weight:700;
+  }
+  .dash-row b{ color: var(--text); font-weight:600; }
+  .float-chip{
+    position:absolute; padding:10px 14px; background: var(--surface); border:1px solid var(--border-strong);
+    border-radius: 12px; font-size:0.8rem; font-weight:600; display:flex; align-items:center; gap:8px;
+    box-shadow: 0 14px 30px -10px rgba(0,0,0,0.5); animation: float 5s ease-in-out infinite;
+  }
+  .float-chip.one{ top:-16px; left:-24px; animation-delay:0s; }
+  .float-chip.two{ bottom:-18px; right:-16px; animation-delay:1.2s; }
+  .float-chip .dot{ width:8px; height:8px; border-radius:50%; background: var(--whatsapp); }
+  @keyframes float{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-8px); } }
+
+  @media (min-width: 0px){
+    .dash-bars span:nth-child(1){ height:55%; animation-delay:.05s;}
+    .dash-bars span:nth-child(2){ height:80%; animation-delay:.15s;}
+    .dash-bars span:nth-child(3){ height:40%; animation-delay:.25s;}
+    .dash-bars span:nth-child(4){ height:95%; animation-delay:.35s;}
+    .dash-bars span:nth-child(5){ height:65%; animation-delay:.45s;}
+    .dash-bars span:nth-child(6){ height:75%; animation-delay:.55s;}
+  }
+
+  /* ---------- Section shell ---------- */
+  section{ padding: 88px 0; position:relative; }
+  .section-head{ max-width: 620px; margin-bottom: 46px; }
+  .section-head h2{ font-size: clamp(1.7rem, 3vw, 2.3rem); color:#fff; font-weight:700; }
+  .section-head p{ margin-top:14px; color: var(--text-muted); font-size:1.02rem; }
+
+  .reveal{ opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform: translateY(0); }
+
+  /* ---------- Services ---------- */
+  .services-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; }
+  .service-card{
+    background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-md);
+    padding: 28px 24px; display:flex; flex-direction:column; gap:16px;
+    transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    cursor:pointer; text-align:left;
+  }
+  .service-card:hover{ transform: translateY(-4px); border-color: var(--border-strong); background: var(--surface-2); }
+  .service-icon{
+    width:46px; height:46px; border-radius:12px; background: var(--accent-grad);
+    display:flex; align-items:center; justify-content:center; color:#fff;
+  }
+  .service-icon svg{ width:22px; height:22px; }
+  .service-card h3{ font-size:1.15rem; color:#fff; font-weight:650; }
+  .service-card .desc{ color: var(--text-muted); font-size:0.92rem; line-height:1.55; }
+  .service-features{ display:flex; flex-direction:column; gap:7px; margin-top:2px; }
+  .service-features li{ list-style:none; font-size:0.85rem; color: var(--text-dim); display:flex; gap:8px; align-items:flex-start; }
+  .service-features li svg{ width:14px; height:14px; margin-top:3px; color: var(--accent-1); flex-shrink:0; }
+  .service-cta{
+    margin-top:auto; padding-top:6px; font-size:0.92rem; font-weight:600; color: var(--accent-1);
+    display:flex; align-items:center; gap:6px; transition: gap .2s ease;
+  }
+  .service-card:hover .service-cta{ gap:10px; }
+
+  /* ---------- Why us ---------- */
+  .why-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:18px; }
+  .why-card{
+    background: linear-gradient(160deg, var(--surface), rgba(19,26,46,0.4));
+    border:1px solid var(--border); border-radius: var(--radius-md); padding:24px 20px;
+  }
+  .why-card .num{ font-family: var(--font-display); font-size:0.8rem; color: var(--accent-1); font-weight:700; letter-spacing:0.02em; }
+  .why-card h4{ margin-top:12px; font-size:1.02rem; color:#fff; font-weight:650; }
+  .why-card p{ margin-top:10px; font-size:0.88rem; color: var(--text-muted); line-height:1.55; }
+
+  /* ---------- Process ---------- */
+  .process-wrap{ position:relative; }
+  .process-line{
+    position:absolute; top:26px; left:6%; right:6%; height:2px;
+    background: linear-gradient(90deg, transparent, var(--border-strong) 10%, var(--border-strong) 90%, transparent);
+  }
+  .process-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:20px; position:relative; }
+  .process-step{ text-align:left; }
+  .process-dot{
+    width:52px; height:52px; border-radius:50%; background: var(--surface); border:1px solid var(--border-strong);
+    display:flex; align-items:center; justify-content:center; font-family: var(--font-display); font-weight:700;
+    color: var(--accent-1); margin-bottom:18px; position:relative; z-index:2;
+  }
+  .process-step h4{ font-size:1rem; color:#fff; font-weight:650; }
+  .process-step p{ margin-top:8px; font-size:0.87rem; color: var(--text-muted); line-height:1.55; }
+
+  /* ---------- Callout ---------- */
+  .callout{
+    background: linear-gradient(135deg, rgba(91,127,255,0.14), rgba(155,107,255,0.10));
+    border:1px solid var(--border-strong); border-radius: var(--radius-lg);
+    padding: 50px 44px; display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap;
+  }
+  .callout h3{ font-size:1.5rem; color:#fff; max-width:480px; }
+  .callout p{ margin-top:10px; color: var(--text-muted); max-width:460px; font-size:0.96rem; }
+
+  /* ---------- About ---------- */
+  .about-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:56px; align-items:start; }
+  .about-copy p{ color: var(--text-muted); font-size:1rem; line-height:1.75; }
+  .about-copy p + p{ margin-top:16px; }
+  .about-list{ display:flex; flex-direction:column; gap:14px; margin-top:8px; }
+  .about-list li{ list-style:none; display:flex; gap:12px; align-items:flex-start; font-size:0.94rem; color: var(--text-muted); }
+  .about-list li svg{ width:18px; height:18px; color: var(--whatsapp); flex-shrink:0; margin-top:2px; }
+
+  /* ---------- Lead form ---------- */
+  .lead-wrap{
+    background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-lg);
+    padding: 42px; display:grid; grid-template-columns: 0.9fr 1.1fr; gap:40px;
+  }
+  .lead-copy h2{ font-size:1.7rem; color:#fff; }
+  .lead-copy p{ margin-top:14px; color: var(--text-muted); font-size:0.98rem; line-height:1.6; }
+  .form-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+  .field{ display:flex; flex-direction:column; gap:7px; }
+  .field.full{ grid-column: 1 / -1; }
+  .field label{ font-size:0.82rem; color: var(--text-muted); font-weight:500; }
+  .field input, .field select, .field textarea{
+    background: rgba(255,255,255,0.03); border:1px solid var(--border-strong); border-radius:10px;
+    padding: 12px 14px; color: var(--text); font-size:0.92rem; font-family: inherit; width:100%;
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .field input::placeholder, .field textarea::placeholder{ color: var(--text-dim); }
+  .field input:focus, .field select:focus, .field textarea:focus{ border-color: var(--accent-1); background: rgba(255,255,255,0.05); }
+  .field textarea{ resize:vertical; min-height:80px; }
+  .field.error input, .field.error select, .field.error textarea{ border-color:#F0576B; }
+  .field .err-msg{ font-size:0.76rem; color:#F0576B; display:none; }
+  .field.error .err-msg{ display:block; }
+  .form-submit{ margin-top: 6px; width:100%; padding:14px; font-size:0.96rem; }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{ display:flex; flex-direction:column; gap:12px; max-width: 760px; }
+  .faq-item{
+    background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-sm); overflow:hidden;
+  }
+  .faq-q{
+    width:100%; background:none; border:none; color: var(--text); text-align:left; padding: 18px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:0.98rem; font-weight:600;
+  }
+  .faq-q .chev{ width:18px; height:18px; flex-shrink:0; transition: transform .25s ease; color: var(--text-muted); }
+  .faq-item.open .faq-q .chev{ transform: rotate(180deg); color: var(--accent-1); }
+  .faq-a{ max-height:0; overflow:hidden; transition: max-height .3s ease; }
+  .faq-a-inner{ padding: 0 20px 18px; color: var(--text-muted); font-size:0.9rem; line-height:1.6; }
+
+  /* ---------- Contact ---------- */
+  .contact-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:40px; align-items:center; }
+  .contact-card{
+    background: linear-gradient(160deg, var(--surface), var(--surface-2)); border:1px solid var(--border-strong);
+    border-radius: var(--radius-lg); padding: 34px; text-align:center;
+  }
+  .contact-card .brand{ justify-content:center; font-size:1.2rem; margin-bottom:14px; }
+  .contact-services{ margin-top:16px; color: var(--text-muted); font-size:0.86rem; line-height:1.7; }
+  .contact-links{ display:flex; justify-content:center; gap:14px; margin-top:22px; flex-wrap:wrap; }
+  .icon-link{
+    width:40px; height:40px; border-radius:10px; background: rgba(255,255,255,0.05); border:1px solid var(--border-strong);
+    display:flex; align-items:center; justify-content:center; transition: background .2s ease, transform .2s ease;
+  }
+  .icon-link:hover{ background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+  .icon-link svg{ width:18px; height:18px; }
+
+  /* ---------- Footer ---------- */
+  footer{ border-top:1px solid var(--border); padding: 44px 0 28px; }
+  .footer-grid{ display:flex; justify-content:space-between; align-items:flex-start; gap:30px; flex-wrap:wrap; }
+  .footer-tag{ margin-top:10px; color: var(--text-muted); font-size:0.88rem; max-width:280px; }
+  .footer-links{ display:flex; gap:26px; flex-wrap:wrap; }
+  .footer-links a{ color: var(--text-muted); font-size:0.88rem; }
+  .footer-links a:hover{ color: var(--text); }
+  .footer-bottom{ margin-top:34px; padding-top:20px; border-top:1px solid var(--border); font-size:0.8rem; color: var(--text-dim); text-align:center; }
+
+  /* ---------- Floating WhatsApp ---------- */
+  .fab{
+    position: fixed; bottom:24px; right:24px; z-index:600;
+    width:58px; height:58px; border-radius:50%; background: var(--whatsapp);
+    display:flex; align-items:center; justify-content:center; box-shadow: 0 10px 30px rgba(37,211,102,0.45);
+    border:none; transition: transform .2s ease;
+  }
+  .fab:hover{ transform: scale(1.08); }
+  .fab svg{ width:28px; height:28px; color:#08240F; }
+  .fab-tooltip{
+    position:absolute; right:70px; top:50%; transform: translateY(-50%);
+    background: var(--surface); border:1px solid var(--border-strong); padding:8px 14px; border-radius:8px;
+    font-size:0.85rem; white-space:nowrap; opacity:0; pointer-events:none; transition: opacity .2s ease;
+  }
+  .fab:hover .fab-tooltip{ opacity:1; }
+  @media (max-width: 720px){ .fab-tooltip{ display:none; } }
+
+  /* ---------- Back to top ---------- */
+  .to-top{
+    position: fixed; bottom:24px; left:24px; z-index:600; width:44px; height:44px; border-radius:50%;
+    background: var(--surface); border:1px solid var(--border-strong); display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none; transition: opacity .25s ease, transform .2s ease;
+  }
+  .to-top.show{ opacity:1; pointer-events:auto; }
+  .to-top:hover{ transform: translateY(-2px); }
+  .to-top svg{ width:18px; height:18px; color: var(--text-muted); }
+
+  /* ---------- Toast ---------- */
+  .toast{
+    position: fixed; bottom:96px; right:24px; z-index:700; background: var(--surface); border:1px solid var(--border-strong);
+    border-radius:12px; padding: 14px 18px; display:flex; align-items:center; gap:10px; font-size:0.9rem;
+    box-shadow: 0 16px 40px -10px rgba(0,0,0,0.6); transform: translateY(20px); opacity:0; transition: all .3s ease; max-width: 280px;
+  }
+  .toast.show{ transform: translateY(0); opacity:1; }
+  .toast .dot{ width:8px; height:8px; border-radius:50%; background: var(--whatsapp); flex-shrink:0; }
+
+  /* ---------- Modal ---------- */
+  .modal-overlay{
+    position: fixed; inset:0; background: rgba(4,6,12,0.72); backdrop-filter: blur(6px);
+    z-index:800; display:none; align-items:center; justify-content:center; padding:20px;
+  }
+  .modal-overlay.show{ display:flex; }
+  .modal{
+    background: var(--bg-soft); border:1px solid var(--border-strong); border-radius: var(--radius-lg);
+    max-width: 480px; width:100%; max-height:88vh; overflow-y:auto; padding: 30px;
+    animation: modalIn .25s ease;
+  }
+  @keyframes modalIn{ from{ opacity:0; transform: translateY(14px) scale(0.98);} to{ opacity:1; transform: translateY(0) scale(1);} }
+  .modal-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; }
+  .modal-icon{ width:42px; height:42px; border-radius:11px; background: var(--accent-grad); display:flex; align-items:center; justify-content:center; color:#fff; }
+  .modal-icon svg{ width:20px; height:20px; }
+  .modal-close{ background:none; border:none; color: var(--text-muted); width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; }
+  .modal-close:hover{ background: rgba(255,255,255,0.06); color:#fff; }
+  .modal h3{ margin-top:16px; font-size:1.25rem; color:#fff; }
+  .modal .desc{ margin-top:8px; color: var(--text-muted); font-size:0.9rem; line-height:1.55; }
+  .modal-features{ display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+  .modal-features span{
+    font-size:0.78rem; padding:6px 11px; border-radius:999px; background: rgba(255,255,255,0.05);
+    border:1px solid var(--border); color: var(--text-muted);
+  }
+  .modal-form{ margin-top:22px; display:flex; flex-direction:column; gap:14px; }
+
+  /* Utility */
+  .hide-desktop{ display:none; }
+  @media (max-width: 980px){
+    .services-grid{ grid-template-columns: repeat(2,1fr); }
+    .why-grid{ grid-template-columns: repeat(2,1fr); }
+    .process-grid{ grid-template-columns: repeat(2,1fr); }
+    .process-line{ display:none; }
+    .about-grid{ grid-template-columns: 1fr; }
+    .lead-wrap{ grid-template-columns: 1fr; padding:30px; }
+    .contact-grid{ grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px){
+    .nav-links{ display:none; }
+    .nav-cta .btn-ghost{ display:none; }
+    .hamburger{ display:flex; }
+    .hero-grid{ grid-template-columns: 1fr; }
+    .hero{ padding:64px 0 50px; text-align:left; }
+    .hero-visual{ order:-1; margin-bottom: 10px; }
+    .services-grid{ grid-template-columns: 1fr; }
+    .why-grid{ grid-template-columns: 1fr; }
+    .process-grid{ grid-template-columns: 1fr; }
+    .form-grid{ grid-template-columns: 1fr; }
+    .callout{ padding:32px 24px; }
+    section{ padding:60px 0; }
+    .footer-grid{ flex-direction:column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div class="bg-grid"></div>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="brand"><img class="brand-mark" src="plog.jpeg" alt="Praveen Ads Agency logo"> Praveen Ads Agency</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#why-us" class="nav-link">Why Us</a></li>
+      <li><a href="#process" class="nav-link">Process</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost hide-desktop-none">Contact</a>
+      <button class="btn btn-whatsapp" onclick="openGeneralWhatsApp()">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+        Chat on WhatsApp
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal in">
+      <h1>Grow Your Business With Powerful Digital Marketing</h1>
+      <p class="sub">Meta Ads, WhatsApp API, Agency Ad Accounts, Social Media Marketing and Google Business Profile solutions designed to help businesses generate more enquiries and build a stronger online presence.</p>
+      <div class="hero-ctas">
+        <button class="btn btn-whatsapp" onclick="openGeneralWhatsApp()">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+          Get Started on WhatsApp
+        </button>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Digital Marketing Solutions</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> WhatsApp Lead Support</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Business Growth Strategy</div>
+      </div>
+    </div>
+    <div class="hero-visual reveal in">
+      <div class="dash">
+        <div class="float-chip one"><span class="dot"></span> New enquiry received</div>
+        <div class="dash-head">
+          <span class="dash-title">Campaign Overview</span>
+          <span class="dash-dot"></span>
+        </div>
+        <div class="dash-bars">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="dash-rows">
+          <div class="dash-row"><span class="ic">M</span> Meta Ads — <b>Active</b></div>
+          <div class="dash-row"><span class="ic">W</span> WhatsApp API — <b>Connected</b></div>
+          <div class="dash-row"><span class="ic">G</span> Google Business Profile — <b>Optimized</b></div>
+        </div>
+        <div class="float-chip two">📈 Reach growing steadily</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Our Digital Marketing Services</h2>
+      <p>Pick a service to see what's included, tell us a bit about your business, and continue the conversation on WhatsApp.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== WHY US ===================== -->
+<section id="why-us">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Why Work With Praveen Ads Agency</h2>
+      <p>A focused approach built around understanding your business first.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="num">01</div>
+        <h4>Strategy First</h4>
+        <p>We focus on understanding the business and objective before setting up campaigns.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">02</div>
+        <h4>Performance Focused</h4>
+        <p>Campaigns are monitored and optimized based on available performance data.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">03</div>
+        <h4>WhatsApp Communication</h4>
+        <p>Make it easy for potential customers to start a conversation directly.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="num">04</div>
+        <h4>Multiple Digital Solutions</h4>
+        <p>Meta Ads, WhatsApp API, Social Media Marketing and Google Business Profile under one agency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>How It Works</h2>
+      <p>A simple four-step path from first message to an active plan.</p>
+    </div>
+    <div class="process-wrap">
+      <div class="process-line"></div>
+      <div class="process-grid">
+        <div class="process-step reveal"><div class="process-dot">01</div><h4>Tell Us About Your Business</h4><p>Share what you do and what you're trying to achieve.</p></div>
+        <div class="process-step reveal"><div class="process-dot">02</div><h4>Choose Your Service</h4><p>Pick the service that fits — Meta Ads, WhatsApp API, and more.</p></div>
+        <div class="process-step reveal"><div class="process-dot">03</div><h4>Discuss On WhatsApp</h4><p>Continue the conversation directly with our team.</p></div>
+        <div class="process-step reveal"><div class="process-dot">04</div><h4>Plan &amp; Execute</h4><p>We put together and run the right solution for you.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CALLOUT ===================== -->
+<section>
+  <div class="container">
+    <div class="callout reveal">
+      <div>
+        <h3>Not Sure Which Service You Need?</h3>
+        <p>Tell us about your business and what you want to achieve. We'll discuss the suitable digital marketing solution with you.</p>
+      </div>
+      <button class="btn btn-whatsapp" onclick="openGeneralWhatsApp()">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+        Talk to Us on WhatsApp
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="section-head reveal" style="margin-bottom:0;">
+      <h2>About Praveen Ads Agency</h2>
+      <p style="margin-top:16px;">Praveen Ads Agency works with businesses that want a clearer, more organized approach to their online presence — from running ads to managing customer conversations on WhatsApp.</p>
+    </div>
+    <div class="about-copy reveal">
+      <p>Rather than treating every business the same, we start by understanding what you're trying to achieve, then match it to the right combination of services — whether that's Meta Ads, an Agency Ad Account, WhatsApp API, Social Media Marketing, or your Google Business Profile.</p>
+      <ul class="about-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Practical, business-first approach to digital marketing</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Direct WhatsApp communication instead of long forms</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Multiple services under one agency, coordinated together</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LEAD FORM ===================== -->
+<section id="lead">
+  <div class="container">
+    <div class="lead-wrap reveal">
+      <div class="lead-copy">
+        <h2>Let's Talk About Your Business</h2>
+        <p>Tell us what you need and our team will connect with you on WhatsApp.</p>
+      </div>
+      <form class="form-grid" id="leadForm" novalidate>
+        <div class="field" id="f-name">
+          <label for="ln">Name</label>
+          <input type="text" id="ln" placeholder="Your name">
+          <span class="err-msg">Please enter your name.</span>
+        </div>
+        <div class="field" id="f-business">
+          <label for="lb">Business Name</label>
+          <input type="text" id="lb" placeholder="Your business name">
+          <span class="err-msg">Please enter your business name.</span>
+        </div>
+        <div class="field" id="f-phone">
+          <label for="lp">WhatsApp Number</label>
+          <input type="tel" id="lp" placeholder="e.g. 9256777139">
+          <span class="err-msg">Please enter a valid WhatsApp number.</span>
+        </div>
+        <div class="field" id="f-service">
+          <label for="ls">Select Service</label>
+          <select id="ls">
+            <option value="">Choose a service</option>
+            <option value="Meta Ads">Meta Ads</option>
+            <option value="WhatsApp API">WhatsApp API</option>
+            <option value="Agency Ad Account">Agency Ad Account</option>
+            <option value="Social Media Marketing">Social Media Marketing</option>
+            <option value="Google Business Profile">Google Business Profile</option>
+          </select>
+          <span class="err-msg">Please select a service.</span>
+        </div>
+        <div class="field full" id="f-req">
+          <label for="lr">Your Requirement</label>
+          <textarea id="lr" placeholder="Briefly describe what you need help with"></textarea>
+          <span class="err-msg">Please describe your requirement.</span>
+        </div>
+        <div class="field full">
+          <button type="submit" class="btn btn-whatsapp form-submit">Send Requirement on WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Frequently Asked Questions</h2>
+      <p>Quick answers about our services and how to get started.</p>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="section-head" style="margin-bottom:24px;">
+        <h2>Ready to Discuss Your Business?</h2>
+        <p>Start a conversation on WhatsApp and tell us what you're looking to achieve.</p>
+      </div>
+      <button class="btn btn-whatsapp" onclick="openGeneralWhatsApp()">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+        Start a WhatsApp Conversation
+      </button>
+    </div>
+    <div class="reveal">
+      <div class="contact-card">
+        <div class="brand"><img class="brand-mark" src="plog.jpeg" alt="Praveen Ads Agency logo"> Praveen Ads Agency</div>
+        <div class="contact-services">Meta Ads &nbsp;|&nbsp; WhatsApp API &nbsp;|&nbsp; Agency Ad Account<br>Social Media Marketing &nbsp;|&nbsp; Google Business Profile</div>
+        <div class="contact-links">
+          <a class="icon-link" href="#" onclick="openGeneralWhatsApp(); return false;" aria-label="WhatsApp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="var(--whatsapp)"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="brand"><img class="brand-mark" src="plog.jpeg" alt="Praveen Ads Agency logo"> Praveen Ads Agency</div>
+      <p class="footer-tag">Digital Marketing Solutions for Growing Businesses</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#" onclick="return false;">Privacy Policy</a>
+      <a href="#" onclick="return false;">Terms &amp; Conditions</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Praveen Ads Agency. All rights reserved.</div>
+</footer>
+
+<!-- ===================== FLOATING WHATSAPP ===================== -->
+<button class="fab" onclick="openGeneralWhatsApp()" aria-label="Chat on WhatsApp">
+  <span class="fab-tooltip">Chat with us</span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+</button>
+
+<!-- ===================== BACK TO TOP ===================== -->
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- ===================== TOAST ===================== -->
+<div class="toast" id="toast"><span class="dot"></span><span id="toastText">Opening WhatsApp…</span></div>
+
+<!-- ===================== SERVICE MODAL ===================== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <div class="modal-icon" id="modalIcon"></div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <h3 id="modalTitle"></h3>
+    <p class="desc" id="modalDesc"></p>
+    <div class="modal-features" id="modalFeatures"></div>
+
+    <div class="modal-form">
+      <p style="font-size:0.98rem; font-weight:600; color:#fff; margin-top:6px;">Tell us about your requirement</p>
+      <div class="field" id="m-f-business">
+        <label for="mBusiness">Business Name</label>
+        <input type="text" id="mBusiness" placeholder="Enter business name">
+        <span class="err-msg">Please enter your business name.</span>
+      </div>
+      <div class="field" id="m-f-need">
+        <label for="mNeed">What do you need?</label>
+        <select id="mNeed">
+          <option value="">Select requirement</option>
+          <option value="Lead Generation">Lead Generation</option>
+          <option value="Brand Awareness">Brand Awareness</option>
+          <option value="Sales / Conversions">Sales / Conversions</option>
+          <option value="Setup & Consultation">Setup &amp; Consultation</option>
+          <option value="Other">Other</option>
+        </select>
+        <span class="err-msg">Please select what you need.</span>
+      </div>
+      <div class="field">
+        <label for="mBudget">Monthly Budget (optional)</label>
+        <input type="text" id="mBudget" placeholder="e.g. ₹15,000/month">
+      </div>
+      <button class="btn btn-whatsapp form-submit" onclick="submitModal()">Continue on WhatsApp →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ===================== CONFIG ===================== */
+  const WHATSAPP_NUMBER = "9256777139"; // TODO: replace with the agency's real WhatsApp number (country code + number, no + or spaces)
+
+  function openWhatsApp(message){
+    const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+    showToast("Opening WhatsApp…");
+  }
+
+  function openGeneralWhatsApp(){
+    openWhatsApp("Hello Praveen Ads Agency, I would like to know more about your digital marketing services.");
+  }
+
+  /* ===================== SERVICES DATA ===================== */
+  const services = [
+    {
+      id: "meta-ads",
+      title: "Meta Ads",
+      desc: "Run targeted advertising campaigns across Facebook and Instagram to reach relevant audiences and generate enquiries.",
+      features: ["Campaign Setup","Audience Targeting","Creative Strategy","Campaign Optimization","Performance Tracking"],
+      cta: "Get Meta Ads Consultation →",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg>',
+      baseMessage: "Hello Praveen Ads Agency, I am interested in Meta Ads. I would like to discuss my business and advertising requirements."
+    },
+    {
+      id: "whatsapp-api",
+      title: "WhatsApp API",
+      desc: "Set up WhatsApp-based business communication and automation solutions to manage customer conversations more efficiently.",
+      features: ["WhatsApp Business API","Customer Communication","Automation","Templates","Lead Management"],
+      cta: "Get WhatsApp API Consultation →",
+      icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.7-1-2.4-1.7-.6-.6-1.1-1.3-1.5-2.1-.1-.2 0-.4.1-.5.2-.2.4-.4.6-.6.1-.1.2-.3.1-.5-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.6.1 1.1.6 2.2 1.3 3.2 1.4 2 3.2 3.5 5.4 4.3 1 .4 1.9.5 2.5.4.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.2-.2-.4-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>',
+      baseMessage: "Hello Praveen Ads Agency, I am interested in WhatsApp API. I would like to know about the setup, features and pricing."
+    },
+    {
+      id: "agency-account",
+      title: "Agency Ad Account",
+      desc: "Business advertising account solutions for managing digital advertising campaigns with a structured agency setup.",
+      features: ["Agency Account Setup","Campaign Management","Account Structure","Business Support","Advertising Assistance"],
+      cta: "Ask About Agency Account →",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>',
+      baseMessage: "Hello Praveen Ads Agency, I am interested in an Agency Ad Account. Please share the details, requirements and pricing."
+    },
+    {
+      id: "social-media",
+      title: "Social Media Marketing",
+      desc: "Build a consistent social media presence with content planning, creative strategy and audience engagement.",
+      features: ["Social Media Strategy","Content Planning","Post Design","Audience Engagement","Page Management"],
+      cta: "Discuss Social Media Marketing →",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>',
+      baseMessage: "Hello Praveen Ads Agency, I am interested in Social Media Marketing. I would like to discuss my business requirements."
+    },
+    {
+      id: "gbp",
+      title: "Google Business Profile",
+      desc: "Improve your local online presence and help customers discover your business on Google Search and Maps.",
+      features: ["Business Profile Setup","Profile Optimization","Business Information","Local Visibility","Review Strategy"],
+      cta: "Improve My Google Profile →",
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-11a7 7 0 1 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+      baseMessage: "Hello Praveen Ads Agency, I am interested in Google Business Profile services. Please share the process and pricing."
+    }
+  ];
+
+  const servicesGrid = document.getElementById("servicesGrid");
+  services.forEach(s => {
+    const card = document.createElement("button");
+    card.className = "service-card reveal";
+    card.setAttribute("type","button");
+    card.innerHTML = `
+      <div class="service-icon">${s.icon}</div>
+      <h3>${s.title}</h3>
+      <p class="desc">${s.desc}</p>
+      <ul class="service-features">
+        ${s.features.map(f => `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> ${f}</li>`).join("")}
+      </ul>
+      <span class="service-cta">${s.cta}</span>
+    `;
+    card.addEventListener("click", () => openModal(s.id));
+    servicesGrid.appendChild(card);
+  });
+
+  /* ===================== MODAL ===================== */
+  let activeService = null;
+  const modalOverlay = document.getElementById("modalOverlay");
+
+  function openModal(id){
+    activeService = services.find(s => s.id === id);
+    if(!activeService) return;
+    document.getElementById("modalIcon").innerHTML = activeService.icon;
+    document.getElementById("modalTitle").textContent = activeService.title;
+    document.getElementById("modalDesc").textContent = activeService.desc;
+    document.getElementById("modalFeatures").innerHTML = activeService.features.map(f => `<span>${f}</span>`).join("");
+    document.getElementById("mBusiness").value = "";
+    document.getElementById("mNeed").value = "";
+    document.getElementById("mBudget").value = "";
+    clearError("m-f-business"); clearError("m-f-need");
+    modalOverlay.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+  function closeModal(){
+    modalOverlay.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+  modalOverlay.addEventListener("click", e => { if(e.target === modalOverlay) closeModal(); });
+  document.addEventListener("keydown", e => { if(e.key === "Escape") closeModal(); });
+
+  function setError(fieldId, isError){
+    const el = document.getElementById(fieldId);
+    if(!el) return;
+    el.classList.toggle("error", isError);
+  }
+  function clearError(fieldId){ setError(fieldId, false); }
+
+  function submitModal(){
+    if(!activeService) return;
+    const business = document.getElementById("mBusiness").value.trim();
+    const need = document.getElementById("mNeed").value;
+    const budget = document.getElementById("mBudget").value.trim();
+
+    let valid = true;
+    if(!business){ setError("m-f-business", true); valid = false; } else { clearError("m-f-business"); }
+    if(!need){ setError("m-f-need", true); valid = false; } else { clearError("m-f-need"); }
+    if(!valid) return;
+
+    let msg = `Hello Praveen Ads Agency,\n\nI am interested in ${activeService.title}.\n\nBusiness Name: ${business}\nRequirement: ${need}`;
+    if(budget){ msg += `\nBudget: ${budget}`; }
+    msg += `\n\nI would like to discuss further.`;
+
+    openWhatsApp(msg);
+    closeModal();
+  }
+
+  /* ===================== LEAD FORM ===================== */
+  const leadForm = document.getElementById("leadForm");
+  leadForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = document.getElementById("ln").value.trim();
+    const business = document.getElementById("lb").value.trim();
+    const phone = document.getElementById("lp").value.trim();
+    const service = document.getElementById("ls").value;
+    const req = document.getElementById("lr").value.trim();
+
+    let valid = true;
+    if(!name){ setError("f-name", true); valid = false; } else clearError("f-name");
+    if(!business){ setError("f-business", true); valid = false; } else clearError("f-business");
+    if(!phone || phone.replace(/\D/g,"").length < 10){ setError("f-phone", true); valid = false; } else clearError("f-phone");
+    if(!service){ setError("f-service", true); valid = false; } else clearError("f-service");
+    if(!req){ setError("f-req", true); valid = false; } else clearError("f-req");
+    if(!valid) return;
+
+    const msg = `Hello Praveen Ads Agency,\n\nName: ${name}\nBusiness: ${business}\nService: ${service}\nRequirement: ${req}\nWhatsApp: ${phone}\n\nPlease contact me.`;
+    openWhatsApp(msg);
+    leadForm.reset();
+  });
+
+  /* ===================== FAQ ===================== */
+  const faqs = [
+    { q: "What digital marketing services do you provide?", a: "We provide Meta Ads, WhatsApp API setup, Agency Ad Accounts, Social Media Marketing and Google Business Profile services." },
+    { q: "Do you provide Meta Ads campaign setup?", a: "Yes. We handle campaign setup, audience targeting, creative strategy, optimization and performance tracking for Meta Ads." },
+    { q: "What is WhatsApp API?", a: "WhatsApp API allows businesses to manage customer conversations, automation and templates through WhatsApp Business tools." },
+    { q: "What is an Agency Ad Account?", a: "An Agency Ad Account is a structured advertising account setup used to manage digital campaigns under an agency arrangement." },
+    { q: "Do you provide Social Media Marketing?", a: "Yes. This includes content planning, post design, page management and audience engagement." },
+    { q: "Can you help with Google Business Profile?", a: "Yes. We help set up and optimize your Google Business Profile to improve local visibility on Search and Maps." },
+    { q: "How can I contact Praveen Ads Agency?", a: "You can reach us directly on WhatsApp using any of the chat buttons on this website." },
+    { q: "How do I get started?", a: "Choose a service, share a few details about your business, and continue the conversation on WhatsApp — our team will take it from there." }
+  ];
+  const faqList = document.getElementById("faqList");
+  faqs.forEach((f, i) => {
+    const item = document.createElement("div");
+    item.className = "faq-item reveal";
+    item.innerHTML = `
+      <button class="faq-q" aria-expanded="false">
+        ${f.q}
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>
+    `;
+    const btn = item.querySelector(".faq-q");
+    const answer = item.querySelector(".faq-a");
+    btn.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+      document.querySelectorAll(".faq-item.open").forEach(o => {
+        o.classList.remove("open");
+        o.querySelector(".faq-a").style.maxHeight = null;
+        o.querySelector(".faq-q").setAttribute("aria-expanded","false");
+      });
+      if(!isOpen){
+        item.classList.add("open");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+    faqList.appendChild(item);
+  });
+
+  /* ===================== TOAST ===================== */
+  let toastTimer;
+  function showToast(text){
+    const toast = document.getElementById("toast");
+    document.getElementById("toastText").textContent = text;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
+  }
+
+  /* ===================== MOBILE MENU ===================== */
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    mobileMenu.classList.toggle("show");
+  });
+  mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    hamburger.classList.remove("open");
+    mobileMenu.classList.remove("show");
+  }));
+
+  /* ===================== ACTIVE NAV + BACK TO TOP ===================== */
+  const navLinks = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll("section[id]");
+  const toTop = document.getElementById("toTop");
+
+  window.addEventListener("scroll", () => {
+    let current = "home";
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if(rect.top <= 120 && rect.bottom > 120) current = sec.id;
+    });
+    navLinks.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + current));
+    toTop.classList.toggle("show", window.scrollY > 500);
+  });
+  toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+  /* ===================== SCROLL REVEAL ===================== */
+  const revealEls = document.querySelectorAll(".reveal");
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("in");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
